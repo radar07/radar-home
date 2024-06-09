@@ -9,7 +9,11 @@
   "trailingComma": "none",
   "overrides": [
     {
-      "files": ["*.md", "*.mdx", "*.yaml", "*.yml"]
+      "files": ["*.md", "*.mdx", "*.yaml", "*.yml"],
+      "options": {
+        "tabWidth": 2
+      }
     }
   ]
 }
+
