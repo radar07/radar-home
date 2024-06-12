@@ -14,12 +14,18 @@ const socialLinks = siteConfig.socialLinks || []
     <div class="flex flex-wrap gap-x-4 gap-y-1">
       {
         socialLinks.map(link => (
-          <a class="inline-flex items-center justify-center text-sm" href={link.href} target="_blank">
+          <a
+            class="inline-flex items-center justify-center text-sm hover:underline hover:underline-offset-2"
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {link.text}
           </a>
         ))
       }
     </div>
-    <p class="text-sm">&copy; 2024 Pranav RK. All rights reserved.</p>
+    <p class="text-sm">&copy; {new Date().getFullYear()}&nbsp;{siteConfig.title}. All rights reserved.</p>
+    <!-- <p class="text-xs">Built with {Astro.generator}</p> -->
   </div>
 </footer>

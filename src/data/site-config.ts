@@ -10,7 +10,7 @@ export type SiteConfig = {
 }
 
 const siteConfig: SiteConfig = {
-  title: "Pranav's Home",
+  title: 'Pranav RK',
   description: 'Software Engineer',
   socialLinks: [
     {
