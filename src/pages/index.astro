@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
+import Footer from '../components/Footer.astro'
 
 const posts = await getCollection('posts', ({ data }) => {
   return data.isDraft != true
@@ -15,7 +16,7 @@ const posts = await getCollection('posts', ({ data }) => {
     <title>Astro</title>
   </head>
   <body>
-    <h1>Astro</h1>
+    <h1 class="bg-teal-500 font-mono">Astro</h1>
 
     {
       posts.map(post => (
@@ -28,4 +29,5 @@ const posts = await getCollection('posts', ({ data }) => {
       ))
     }
   </body>
+  <Footer />
 </html>
