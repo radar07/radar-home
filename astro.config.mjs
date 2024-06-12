@@ -5,6 +5,5 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://pranavrk-me.com',
-  integrations: [tailwind({ applyBaseStyles: false }), mdx(), sitemap()]
+  integrations: [mdx(), sitemap(), tailwind()]
 })

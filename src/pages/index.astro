@@ -1,31 +1,25 @@
 ---
 import { getCollection } from 'astro:content'
+import Footer from '../components/Footer.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
 
 const posts = await getCollection('posts', ({ data }) => {
   return data.isDraft != true
 })
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-
-    {
-      posts.map(post => (
-        <>
-          <h2>
-            <a href={`posts/${post.slug}/`}>{post.data.title}</a>
-          </h2>
-          <p>{post.data.excerpt}</p>
-        </>
-      ))
-    }
-  </body>
-</html>
+<BaseLayout>
+  {
+    (
+      <div class="mb-16 sm:mb-24">
+        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">Blog</h2>
+        {posts.map(post => (
+            <div class="mb-10 sm:mb-12">
+              <a href={`posts/${post.slug}/`}>{post.data.title}</a>
+            </div>
+            <p>{post.data.excerpt}</p>
+        ))}
+      </div>
+    )
+  }
+</BaseLayout>
