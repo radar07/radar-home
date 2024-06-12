@@ -1,0 +1,20 @@
+---
+import siteConfig from '../data/site-config'
+import NavLink from './NavLink.astro'
+
+const navLinks = siteConfig.headerNavLinks || []
+---
+
+<nav class="min-h-10 pt-4 pb-12 relative sm:min-h-14 sm:pb-24 md:pt-8">
+  {
+    (
+      <div class="w-full max-w-3xl mx-auto relative">
+        <ul class="menu flex gap-6">
+          {navLinks.map(link => (
+            <li><NavLink class="text-l font-serif text-main hover:underline hover:underline-offset-2 md:text-base" href={link.href}>{link.text}</NavLink></li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+</nav>
