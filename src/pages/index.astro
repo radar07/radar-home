@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
-import Footer from '../components/Footer.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
+import PostPreview from '../components/PostPreview.astro'
 
 const posts = await getCollection('posts', ({ data }) => {
   return data.isDraft != true
@@ -15,9 +15,9 @@ const posts = await getCollection('posts', ({ data }) => {
         <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">Blog</h2>
         {posts.map(post => (
             <div class="mb-10 sm:mb-12">
-              <a href={`posts/${post.slug}/`}>{post.data.title}</a>
+              {/* <a href={`posts/${post.slug}/`}>{post.data.title}</a> */}
+              <PostPreview post={post}/>
             </div>
-            <p>{post.data.excerpt}</p>
         ))}
       </div>
     )
