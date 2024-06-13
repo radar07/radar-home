@@ -12,9 +12,9 @@ const posts = await getCollection('posts', ({ data }) => {
   {
     (
       <div class="mb-16 sm:mb-24">
-        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">Blog</h2>
+        <h2 class="mb-8 text-xl font-serif italic sm:mb-10 sm:text-2xl">Blog</h2>
         {posts.map(post => (
-            <div class="mb-10 sm:mb-12">
+            <div class="mb-10 sm:mb-10">
               {/* <a href={`posts/${post.slug}/`}>{post.data.title}</a> */}
               <PostPreview post={post}/>
             </div>
