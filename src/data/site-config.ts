@@ -3,15 +3,21 @@ export type Link = {
   href: string
 }
 
+export type Hero = {
+  title: string
+  profile: string
+}
+
 export type SiteConfig = {
   title: string
   description: string
   headerNavLinks: Link[]
   socialLinks: Link[]
+  hero: Hero
 }
 
 const siteConfig: SiteConfig = {
-  title: 'Pranav RK',
+  title: 'Welcome to my corner of the Internet',
   description: 'Software Engineer',
   headerNavLinks: [
     {
@@ -40,7 +46,12 @@ const siteConfig: SiteConfig = {
       text: 'X',
       href: 'https://x.com'
     }
-  ]
+  ],
+  hero: {
+    title: 'Pranav RK',
+    profile:
+      'An enthusiastic and experienced software engineer with a deep love for computers, Linux, and open-source software. Proven expertise in designing, developing, and leading software solutions, microservices architecture, and continuous involvement from start to end.'
+  }
 }
 
 export default siteConfig

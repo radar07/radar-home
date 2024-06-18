@@ -11,7 +11,14 @@ const navLinks = siteConfig.headerNavLinks || []
       <div class="w-full max-w-3xl mx-auto relative">
         <ul class="menu flex gap-6">
           {navLinks.map(link => (
-            <li><NavLink class="text-l font-serif text-main hover:underline hover:underline-offset-2 md:text-base" href={link.href}>{link.text}</NavLink></li>
+            <li>
+              <NavLink
+                class="text-l font-serif text-main hover:underline hover:underline-offset-2 md:text-base"
+                href={link.href}
+              >
+                {link.text}
+              </NavLink>
+            </li>
           ))}
         </ul>
       </div>
