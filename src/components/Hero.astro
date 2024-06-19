@@ -1,5 +1,6 @@
 ---
 import siteConfig from '../data/site-config'
+import myImage from '../assets/profile.png'
 import { marked } from 'marked'
 
 const hero = siteConfig.hero
@@ -8,11 +9,17 @@ const hero = siteConfig.hero
 {
   (
     <section class="w-full flex flex-col gap-8 mb-16 sm:mb-24">
-      <h1 class="text-2xl leading-tight font-serif font-medium sm:text-4xl sm:leading-tight">{hero.title}</h1>
       <div class="flex flex-row">
-        <img class="" src="favicon.svg" alt="profile" />
-        <div>{hero.profile}</div>
+        <img
+          src={myImage.src}
+          alt="profile.png"
+          width="75px"
+          height="75px"
+          style="border-radius: 100%; object-position: center; object-fit: contain;"
+        />
+        <h1 class="pl-4 text-2xl leading-tight font-serif font-medium sm:text-4xl sm:leading-tight">{hero.title}</h1>
       </div>
+      {<div set:html={marked.parse(hero.profile)} />}
     </section>
   )
 }

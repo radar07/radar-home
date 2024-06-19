@@ -50,7 +50,7 @@ const siteConfig: SiteConfig = {
   hero: {
     title: 'Pranav RK',
     profile:
-      'An enthusiastic and experienced software engineer with a deep love for computers, Linux, and open-source software. Proven expertise in designing, developing, and leading software solutions, microservices architecture, and continuous involvement from start to end.'
+      '<p>An enthusiastic and experienced software engineer with a deep love for computers, Linux, and open-source software. Proven expertise in designing, developing, and leading software solutions, microservices architecture, and continuous involvement from start to end.</p>'
   }
 }
 
