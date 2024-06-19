@@ -10,6 +10,16 @@ const postCollection = defineCollection({
   })
 })
 
+const projects = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    isDraft: z.boolean().default(false)
+  })
+})
+
 export const collections = {
-  posts: postCollection
+  posts: postCollection,
+  projects
 }

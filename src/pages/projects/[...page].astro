@@ -1,0 +1,22 @@
+---
+import type { Page, GetStaticPathsOptions } from 'astro'
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import type { CollectionEntry } from 'astro:content'
+import ProjectPreview from '../../components/ProjectPreview.astro'
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const projects = await getCollection('projects')
+  return paginate(projects, { pageSize: 4 })
+}
+
+type Props = { page: Page<CollectionEntry<'projects'>> }
+
+const { page } = Astro.props
+const projects = page.data
+---
+
+<BaseLayout title="Portfolio" showHeader={false}>
+  <h1 class="mb-8 text-xl font-serif italic sm:mb-10 sm:text-2xl">Portfolio</h1>
+  {projects.map(project => <ProjectPreview project={project} class="mb-10 sm:mb-10" />)}
+</BaseLayout>

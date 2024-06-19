@@ -2,26 +2,40 @@
 import { getCollection } from 'astro:content'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import PostPreview from '../components/PostPreview.astro'
+import ProjectPreview from '../components/ProjectPreview.astro'
 import Hero from '../components/Hero.astro'
 
 const posts = await getCollection('posts', ({ data }) => {
   return data.isDraft != true
 })
+
+const projects = await getCollection('projects')
 ---
 
 <BaseLayout>
   <Hero />
   {
     (
-      <div class="mb-16 sm:mb-24">
-        <h2 class="mb-8 text-xl font-serif italic sm:mb-10 sm:text-2xl">Blog</h2>
-        {posts.map(post => (
-          <div class="mb-10 sm:mb-10">
-            {/* <a href={`posts/${post.slug}/`}>{post.data.title}</a> */}
-            <PostPreview post={post} />
-          </div>
-        ))}
-      </div>
+      <>
+        <div class="mb-16 sm:mb-24">
+          <h2 class="mb-8 text-xl font-serif italic sm:mb-10 sm:text-2xl">Projects</h2>
+          {projects.map(project => (
+            <div class="mb-10 sm:mb-10">
+              {/* <a href={`posts/${post.slug}/`}>{post.data.title}</a> */}
+              <ProjectPreview project={project} />
+            </div>
+          ))}
+        </div>
+        <div class="mb-16 sm:mb-24">
+          <h2 class="mb-8 text-xl font-serif italic sm:mb-10 sm:text-2xl">Blog</h2>
+          {posts.map(post => (
+            <div class="mb-10 sm:mb-10">
+              {/* <a href={`posts/${post.slug}/`}>{post.data.title}</a> */}
+              <PostPreview post={post} />
+            </div>
+          ))}
+        </div>
+      </>
     )
   }
 </BaseLayout>
