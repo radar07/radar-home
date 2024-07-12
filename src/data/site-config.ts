@@ -36,15 +36,15 @@ const siteConfig: SiteConfig = {
   socialLinks: [
     {
       text: 'Github',
-      href: 'https://github.com'
+      href: 'https://github.com/radar07'
     },
     {
       text: 'LinkedIn',
-      href: 'https://linkedin.com'
+      href: 'https://www.linkedin.com/in/pranav-rk-979126173'
     },
     {
       text: 'X',
-      href: 'https://x.com'
+      href: 'https://x.com/pranavrk24'
     }
   ],
   hero: {
