@@ -9,6 +9,7 @@ export type Hero = {
   github: string
   linkedin: string
   mail: string
+  x: string
 }
 
 export type SiteConfig = {
@@ -42,6 +43,7 @@ const siteConfig: SiteConfig = {
     github: 'https://github.com/radar07',
     linkedin: 'https://www.linkedin.com/in/pranav-rk-979126173',
     mail: 'mailto:pranavrk.me@gmail.com',
+    x: 'https://x.com/pranavrk24'
   }
 }
 
