@@ -25,6 +25,7 @@ const projects = await getCollection('projects')
               <ProjectPreview project={project} />
             </div>
           ))}
+        <div class="mt-2 sm:mt-4 text-sm italic hover:underline"><a href="/projects">View more...</a></div>
         </div>
         <div class="mb-16 sm:mb-24">
           <h2 class="mb-8 text-xl font-serif italic sm:mb-10 sm:text-2xl">Blog</h2>
@@ -34,6 +35,7 @@ const projects = await getCollection('projects')
               <PostPreview post={post} />
             </div>
           ))}
+        <div class="mt-2 sm:mt-4 text-sm italic hover:underline"><a href="/posts">View more...</a></div>
         </div>
       </>
     )
