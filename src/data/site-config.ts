@@ -15,6 +15,7 @@ export type Hero = {
 export type SiteConfig = {
   title: string
   description: string
+  source: string
   headerNavLinks: Link[]
   hero: Hero
 }
@@ -22,6 +23,7 @@ export type SiteConfig = {
 const siteConfig: SiteConfig = {
   title: 'Welcome to my corner of the Internet',
   description: 'Software Engineer',
+  source: 'https://github.com/radar07/radar-home.git',
   headerNavLinks: [
     {
       text: 'Home',
