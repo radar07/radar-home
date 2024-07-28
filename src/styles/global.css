@@ -11,8 +11,8 @@
   }
   html.dark {
     --color-text-main: 242 241 236; /* #F2F1EC */
-    --color-bg-main: 23 23 23; /* #171717 */
-    --color-bg-muted: 36 36 36; /* #242424 */
+    --color-bg-main: 36 36 36; /* #242424 */
+    --color-bg-muted: 32 32 32; /* #202020 */
     --color-border-main: 242 241 236; /* #F2F1EC */
   }
 }
