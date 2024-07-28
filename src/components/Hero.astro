@@ -17,7 +17,7 @@ const hero = siteConfig.hero
           height="75px"
           style="border-radius: 100%; object-position: center; object-fit: contain;"
         />
-        <h1 class="pl-4 text-2xl leading-tight font-serif font-medium sm:text-4xl sm:leading-tight">{hero.title}</h1>
+        <h1 class="pl-4 text-xl leading-tight font-serif font-medium sm:text-4xl sm:leading-tight">{hero.title}</h1>
       </div>
       {<div set:html={marked.parse(hero.profile)} />}
     </section>

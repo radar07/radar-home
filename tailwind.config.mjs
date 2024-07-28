@@ -6,7 +6,8 @@ export default {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      sans: ['Inter', ...defaultTheme.fontFamily.sans]
+      sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+      serif: ['Nunito', ...defaultTheme.fontFamily.serif]
     },
     extend: {
       textColor: {
