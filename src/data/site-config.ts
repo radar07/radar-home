@@ -41,7 +41,11 @@ const siteConfig: SiteConfig = {
   hero: {
     title: 'Pranav RK',
     profile:
-      '<p>An enthusiastic and experienced software engineer with a deep love for computers, Linux, and open-source software. Proven expertise in designing, developing, and leading software solutions, microservices architecture, and continuous involvement from start to end.</p>',
+      "<p>A Software Engineer professional 💻 with a passion for coding and creativity.</p><br/>\
+       <p>I've got the skills to wrangle <b>Ruby on Rails</b> and <b>Go</b> 🚀 with ease.  I also dabble in frameworks like <b>Svelte</b> and <b>Astro</b>. Right now, I'm having fun exploring the world of front-end development.</p><br/>\
+      <p>In the cloud realm ☁️, I'm well-versed with <b>AWS</b> and tools like <b>Terraform (IaC)</b>, and <b>Docker</b> 🐋 are my trusty companions.</p><br/>\
+      <p>When I'm not coding, you can find me saving the world in video games 🔫 or finding peace in a good book 📖.</p><br/>\
+      <p><i>Me in a nutshell:</i> 👨‍💻 + 📚 + 🎮</p>",
     github: 'https://github.com/radar07',
     linkedin: 'https://www.linkedin.com/in/pranav-rk-979126173',
     mail: 'mailto:pranavrk.me@gmail.com',
