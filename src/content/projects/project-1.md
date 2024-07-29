@@ -3,7 +3,7 @@ title: 'My very own website'
 description: 'Built my own blog/portfolio site using Astro'
 ---
 
-### Astro Blog/Portfolio
+## Astro Blog/Portfolio
 
 ![My site](/astro-blog.png)
 
